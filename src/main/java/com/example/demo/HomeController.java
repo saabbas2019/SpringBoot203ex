@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 //Loads the second form with results
 @Controller
 public class HomeController {
-    @GetMapping("/songform")
+    @GetMapping("/employeeform")
     public String loadFormPage(Model model){
-        model.addAttribute("song", new Song());
-        return "songform";
+        model.addAttribute("employee", new Employee());
+        return "employeeform";
     }
 
-    @PostMapping("/songform")
-    public String loadFromPage(@ModelAttribute Song song, Model model){
-        model.addAttribute("song", song);
-        return "confirmsong";
+    @PostMapping("/employeeform")
+    public String loadFromPage(@ModelAttribute Employee employee, Model model){
+        model.addAttribute("employee", employee);
+        return "confirmemp";
     }
 }
